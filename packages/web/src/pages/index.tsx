@@ -1,58 +1,23 @@
-import { strings } from '@strings/utils/strings';
-import { useState } from 'react';
+import { CallToAction } from '@strings/components/CallToAction';
+import { Features } from '@strings/components/Features';
+import { Footer } from '@strings/components/Footer';
+import { Hero } from '@strings/components/Hero';
+import { Navbar } from '@strings/components/Navbar';
+import { NextPage } from 'next';
 
-const HomePage = () => {
-	const [{ from = '', to = '', style = 'capitalise' }, setState] = useState<{
-		from: string;
-		to: string;
-		style: string;
-	}>({
-		from: '',
-		to: '',
-		style: 'capitalise',
-	});
+const HomePage: NextPage = () => {
 	return (
-		<div className="flex h-screen w-screen flex-col gap-y-4 p-4 md:gap-y-8 md:p-8">
-			<select
-				name="Style"
-				className="w-full rounded-lg border border-neutral-200 px-4 py-2 shadow-sm"
-				value={style}
-				onChange={(event) => {
-					setState((previous) => ({ ...previous, style: event.target.value }));
-				}}>
-				<option value="capitalise">Capitalise</option>
-				<option value="deburr">deburr</option>
-				<option value="kebabcase">kebab-case</option>
-				<option value="lowercase">lowercase</option>
-				<option value="snakecase">snake_case</option>
-				<option value="uppercase">UPPERCASE</option>
-			</select>
-			<div className="grid grow grid-cols-1 gap-4 md:grid-cols-2 md:gap-8">
-				<div className="col-span-1">
-					<textarea
-						id="from"
-						name="from"
-						placeholder="From"
-						value={from}
-						className="h-full w-full resize-none rounded-xl border border-neutral-200 px-4 py-4 shadow"
-						onChange={(event) => {
-							const value = event.target.value;
-							setState((previous) => ({ ...previous, from: value, to: strings(value).format(style) }));
-						}}
-					/>
-				</div>
-				<div className="col-span-1">
-					<textarea
-						id="to"
-						name="to"
-						placeholder="To"
-						value={to}
-						className="h-full w-full resize-none rounded-xl border border-neutral-200 px-4 py-4 shadow"
-						readOnly
-					/>
-				</div>
-			</div>
-		</div>
+		<>
+			<Navbar />
+			<div className="w-full border-t border-neutral-800" />
+			<Hero />
+			<div className="w-full border-t border-neutral-800" />
+			<Features />
+			<div className="w-full border-t border-neutral-800" />
+			<CallToAction />
+			<div className="w-full border-t border-neutral-800" />
+			<Footer />
+		</>
 	);
 };
 
