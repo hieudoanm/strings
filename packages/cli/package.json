@@ -1,10 +1,10 @@
 {
-  "name": "@strings/app",
+  "name": "@strings/cli",
   "version": "0.0.1",
-  "description": "String - Apps",
+  "description": "strings CLI",
   "keywords": [
     "strings",
-    "app"
+    "cli"
   ],
   "homepage": "https://github.com/hieudoanm/strings#readme",
   "bugs": {
@@ -17,17 +17,10 @@
   "license": "GPL-3.0",
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
   "scripts": {
-    "lint": "turbo run lint",
-    "prebuild": "rimraf docs",
-    "build": "turbo run build",
-    "postbuild": "touch docs/.nojekyll",
-    "format": "turbo run format",
-    "prepare": "husky || true"
-  },
-  "devDependencies": {
-    "husky": "9.1.7",
-    "rimraf": "6.0.1",
-    "turbo": "2.5.4"
+    "lint": "make lint || true",
+    "build": "make build || true",
+    "format": "make format || true",
+    "download": "make install || true"
   },
   "packageManager": "pnpm@10.12.4"
 }
