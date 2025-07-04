@@ -1,6 +1,0 @@
-
-
-> @strings/cli@0.0.1 lint /Users/hieudoan/git/github.com/hieudoanm/strings/packages/cli
-> make lint || true
-
-go vet ./...

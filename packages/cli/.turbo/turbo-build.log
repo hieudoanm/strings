@@ -1,6 +1,0 @@
-
-
-> @strings/cli@0.0.1 build /Users/hieudoan/git/github.com/hieudoanm/strings/packages/cli
-> make build || true
-
-go build -o ./bin/strings ./main.go
