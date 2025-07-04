@@ -1,0 +1,107 @@
+(self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
+	[332],
+	{
+		8898: (e, a, l) => {
+			(window.__NEXT_P = window.__NEXT_P || []).push([
+				'/',
+				function () {
+					return l(9797);
+				},
+			]);
+		},
+		9797: (e, a, l) => {
+			'use strict';
+			(l.r(a), l.d(a, { default: () => u }));
+			var r = l(5640);
+			let s = (e) => e.normalize('NFD').replace(/[\u0300-\u036f]/g, ''),
+				o = (e) =>
+					e
+						.split(' ')
+						.map((e) => e.charAt(0).toUpperCase() + e.slice(1).toLowerCase())
+						.join(' '),
+				c = (e) => e.toLowerCase().replace(/\s+/g, '-'),
+				n = (e) => e.toLowerCase().replace(/\s+/g, '_'),
+				t = (e) => e.toUpperCase(),
+				d = (e) => e.toLowerCase(),
+				i = (e) => ({
+					format: (a) =>
+						'capitalise' === a
+							? o(e)
+							: 'deburr' === a
+								? s(e)
+								: 'kebabcase' === a
+									? c(e)
+									: 'lowercase' === a
+										? d(e)
+										: 'snakecase' === a
+											? n(e)
+											: 'uppercase' === a
+												? t(e)
+												: e,
+				});
+			var p = l(148);
+			let u = () => {
+				let [{ from: e = '', to: a = '', style: l = 'capitalise' }, s] = (0, p.useState)({
+					from: '',
+					to: '',
+					style: 'capitalise',
+				});
+				return (0, r.jsxs)('div', {
+					className: 'flex h-screen w-screen flex-col gap-y-4 p-4 md:gap-y-8 md:p-8',
+					children: [
+						(0, r.jsxs)('select', {
+							name: 'Style',
+							className: 'w-full rounded-lg border border-neutral-200 px-4 py-2 shadow-sm',
+							value: l,
+							onChange: (e) => {
+								s((a) => ({ ...a, style: e.target.value }));
+							},
+							children: [
+								(0, r.jsx)('option', { value: 'capitalise', children: 'Capitalise' }),
+								(0, r.jsx)('option', { value: 'deburr', children: 'deburr' }),
+								(0, r.jsx)('option', { value: 'kebabcase', children: 'kebab-case' }),
+								(0, r.jsx)('option', { value: 'lowercase', children: 'lowercase' }),
+								(0, r.jsx)('option', { value: 'snakecase', children: 'snake_case' }),
+								(0, r.jsx)('option', { value: 'uppercase', children: 'UPPERCASE' }),
+							],
+						}),
+						(0, r.jsxs)('div', {
+							className: 'grid grow grid-cols-1 gap-4 md:grid-cols-2 md:gap-8',
+							children: [
+								(0, r.jsx)('div', {
+									className: 'col-span-1',
+									children: (0, r.jsx)('textarea', {
+										id: 'from',
+										name: 'from',
+										placeholder: 'From',
+										value: e,
+										className: 'h-full w-full resize-none rounded-xl border border-neutral-200 px-4 py-4 shadow',
+										onChange: (e) => {
+											let a = e.target.value;
+											s((e) => ({ ...e, from: a, to: i(a).format(l) }));
+										},
+									}),
+								}),
+								(0, r.jsx)('div', {
+									className: 'col-span-1',
+									children: (0, r.jsx)('textarea', {
+										id: 'to',
+										name: 'to',
+										placeholder: 'To',
+										value: a,
+										className: 'h-full w-full resize-none rounded-xl border border-neutral-200 px-4 py-4 shadow',
+										readOnly: !0,
+									}),
+								}),
+							],
+						}),
+					],
+				});
+			};
+		},
+	},
+	(e) => {
+		var a = (a) => e((e.s = a));
+		(e.O(0, [636, 593, 792], () => a(8898)), (_N_E = e.O()));
+	},
+]);
