@@ -25,13 +25,13 @@
 		"prebuild": "rimraf .next",
 		"build": "next build",
 		"prestart": "kill-port 3000",
-		"start": "next start",
-		"prepare": "husky || true"
+		"start": "next start"
 	},
 	"dependencies": {
 		"next": "15.3.5",
 		"react": "19.1.0",
-		"react-dom": "19.1.0"
+		"react-dom": "19.1.0",
+		"uuid": "11.1.0"
 	},
 	"devDependencies": {
 		"@eslint/eslintrc": "3.3.1",
