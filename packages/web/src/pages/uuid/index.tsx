@@ -1,4 +1,4 @@
-import { Navbar } from '@strings/components/Navbar';
+import { Navbar } from '@strings/components/shared/Navbar';
 import { useState } from 'react';
 import { v1, v4, v7 } from 'uuid';
 

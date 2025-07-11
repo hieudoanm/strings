@@ -1,4 +1,4 @@
-import { Navbar } from '@strings/components/Navbar';
+import { Navbar } from '@strings/components/shared/Navbar';
 import { strings } from '@strings/utils/strings';
 import { useState } from 'react';
 

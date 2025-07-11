@@ -1,4 +1,4 @@
-import { Navbar } from '@strings/components/Navbar';
+import { Navbar } from '@strings/components/shared/Navbar';
 import { braillify } from '@strings/utils/braille';
 import { morsify } from '@strings/utils/morse';
 import { useState } from 'react';
